@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# runtime data — don't commit real hardware logs or the learned pattern store
+*.sqlite3
+*.db
+backend/**/patterns.json   # match your actual filename
+firmware/secrets.h
+
+# PlatformIO, if that's your toolchain
+.pio/
+
+# OS/editor
+.DS_Store
+.vscode/
