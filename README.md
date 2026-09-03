@@ -16,6 +16,7 @@ Industrial telemetry streams often face a trade-off: traditional threshold monit
 
 ## System Architecture & Data Flow
 
+```text
 +----------------------------------------+
 |           Edge Sensor Rig              |
 +----------------------------------------+
