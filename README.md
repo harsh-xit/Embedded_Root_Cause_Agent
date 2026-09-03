@@ -72,6 +72,7 @@ Industrial telemetry streams often face a trade-off: traditional threshold monit
 
 ## Repository Structure
 
+```text
 ERCA_Project/
 ├── backend/
 │   ├── erca_engine.py          # Local SLM inference pipeline & prompt engineering
@@ -91,7 +92,7 @@ ERCA_Project/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+111
 ---
 
 ## Getting Started
@@ -102,13 +103,13 @@ ERCA_Project/
 
 ### Installation
 1. Clone the repository:
-   
+```bash
    git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
    cd ERCA_Project
-   
+```   
 
 2. Set up a virtual environment and install dependencies:
-   
+```bash   
    python -m venv venv
    # On Windows:
    venv\Scripts\activate
@@ -116,17 +117,18 @@ ERCA_Project/
    source venv/bin/activate
 
    pip install -r requirements.txt
-   
+```   
+---
 
 ### Running the System
 1. **Launch the Gateway Dashboard:**
-   
+```bash   
    streamlit run dashboard/app.py
-   
+```   
 
 2. **Simulate Telemetry Ingestion (Test Mode):**
    In a separate terminal, trigger a failure simulation profile:
-  
+```bash  
    python simulations/simulate_bearing_wear.py
-   
+```   
    The engine detects the unmapped state, triggers local inference, and commits the explanation to `fault_memory.json`. Re-running the simulation validates immediate sub-millisecond retrieval from the local memory cache.
